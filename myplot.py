@@ -7,33 +7,34 @@ import matplotlib.pyplot as plt
 from scipy.misc import imresize
 
 def plot_comparison(O_image, down_image):
+    O_size = O_image.shape
     plt.subplot(2,3,1)
     plt.imshow(O_image)
     plt.title('original size')
 
     plt.subplot(2,3,2)
-    imrecov = imresize(down_image,size=(28,28),interp='nearest')
+    imrecov = imresize(down_image,size=O_size,interp='nearest')
     plt.imshow(imrecov)
     plt.title('nearest ')
 
     plt.subplot(2,3,3)
-    imrecov = imresize(down_image,size=(28,28),interp='lanczos')
+    imrecov = imresize(down_image,size=O_size,interp='lanczos')
     plt.imshow(imrecov)
     plt.title('lanczos ')
 
     plt.subplot(2,3,4)
-    imrecov = imresize(down_image,size=(28,28),interp='bilinear')
+    imrecov = imresize(down_image,size=O_size,interp='bilinear')
     plt.imshow(imrecov)
     plt.title('bilinear ')
 
     plt.subplot(2,3,5)
-    imrecov = imresize(down_image,size=(28,28),interp='cubic')
+    imrecov = imresize(down_image,size=O_size,interp='cubic')
     plt.imshow(imrecov)
     plt.title('cubic ')
 
 
     plt.subplot(2,3,6)
-    imrecov = imresize(down_image,size=(28,28),interp='bicubic')
+    imrecov = imresize(down_image,size=O_size,interp='bicubic')
     plt.imshow(imrecov)
     plt.title('bicubic ')
 
@@ -50,30 +51,30 @@ def plot_2(original,SR):
     plt.show()
 
 def plot_3(O_image,down_image,SR):
-
+    O_size = O_image.shape
     plt.subplot(2,3,1)
     plt.imshow(O_image)
     plt.title('original size')
 
     plt.subplot(2,3,2)
-    imrecov = imresize(down_image,size=(28,28),interp='nearest')
+    imrecov = imresize(down_image,size=O_size,interp='nearest')
     plt.imshow(imrecov)
     plt.title('nearest ')
 
     plt.subplot(2,3,3)
-    imrecov = imresize(down_image,size=(28,28),interp='lanczos')
+    imrecov = imresize(down_image,size=O_size,interp='lanczos')
     plt.imshow(imrecov)
     plt.title('lanczos ')
 
     plt.subplot(2,3,4)
-    imrecov = imresize(down_image,size=(28,28),interp='bilinear')
+    imrecov = imresize(down_image,size=O_size,interp='bilinear')
     plt.imshow(imrecov)
     plt.title('bilinear ')
 
     plt.subplot(2,3,5)
-    imrecov = imresize(down_image,size=(28,28),interp='cubic')
+    imrecov = imresize(down_image,size=O_size,interp='bicubic')
     plt.imshow(imrecov)
-    plt.title('cubic ')
+    plt.title('bicubic ')
 
 
     plt.subplot(2,3,6)
