@@ -1,0 +1,11 @@
+k:1
+lr:0.002
+nz:100
+pi:0.5
+F:8
+epoch:2000
+pz:<bound method pz.uniform_a_b_pz of <functions.pz object at 0x7f90f341ee50>>
+inDir:/home/ac2211/Documents/PhD_Yr1/Projects/Project9_sketchGAN/InData/omni_back_X.npy
+exDir:/home/ac2211/Documents/PhD_Yr1/Projects/Project9_sketchGAN/ExperimentOmiglot/pi_oGAN4
+oldDir:[]
+batchSize128
